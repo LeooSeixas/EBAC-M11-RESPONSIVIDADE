@@ -11,9 +11,9 @@ Este é um projeto desenvolvido para praticar conceitos avançados de Design Res
 
 ## Funcionalidades exigidas:
 - Estrutura HTML:
-    - Utilizar a estrutura básica de um documento HTML5 (<!DOCTYPE html>, <html>, <head>, <body>).
-    - Criar um cabeçalho (<header>) contendo o logo da agência (fictício) e um menu de navegação (<nav>).
-    - Criar as seguintes seções (<section>):
+    - Utilizar a estrutura básica de um documento HTML5 (!DOCTYPE html, html, head, body).
+    - Criar um cabeçalho (header) contendo o logo da agência (fictício) e um menu de navegação (nav).
+    - Criar as seguintes seções (section):
         - Home: Um banner de boas-vindas destacando a agência e seu diferencial;
         - Sobre Nós: Breve descrição da agência e seus valores;
         - Serviços: Lista de serviços oferecidos (ex: design gráfico, desenvolvimento web, branding, etc.);
