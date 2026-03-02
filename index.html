@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="estilos.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header class="desktop-header">
+        <a class="button-hero" href="#about">Criativa Web</a>
+        <nav>
+            <a class="button" href="#about">Sobre</a>
+            <a class="button" href="#services">Serviços</a>
+            <a class="button" href="#depoiments">Depoimentos</a>
+            <a class="button" href="#contact">Contato</a>
+        </nav>
+        <a class="button" href="#contact">SOLICITAR ORÇAMENTO</a>
+    </header>
+
+    <header class="mobile-header">
+        <h2>Criativa Web</h2>
+        <input type="checkbox" id="btMenu">
+        <label for="btMenu" class="openMenu">☰</label>
+
+        <nav class="sidebar">
+            <label for="btMenu" class="closeMenu">X</label>
+            
+            <a href="#">Sobre</a>
+
+            <div class="submenu">
+                <input type="checkbox" id="aba-servicos">
+                <label for="aba-servicos" class="aba-titulo">
+                    Serviços<i class="x-icon">+</i>
+                </label>
+                <nav class="lista-servicos">
+                    <li href="#">Item 1</li>
+                    <li href="#">Item 2</li>
+                </nav>
+            </div>
+
+            <a  href="#depoiments">Depoimentos</a>
+            <a  href="#contact">Contato</a>
+            <a  href="#contact">Solicitar orçamento</a>
+        </nav>
+    </header>   
+
+    <div class="hero-wrapper">
+        <img 
+            src="img/fundoMenu.avif" 
+            srcset="img/fundoMenu-mobile.avif 600w, img/fundoMenu.avif 1200w" 
+            sizes="(max-width: 600px) 600px, 1200px"
+            class='imagem-fundo-desktop' 
+            alt="Agência Criativa Web - Banner Principal"
+        >
+
+        <section class="hero">
+
+
+
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-content">
+                <p> Que tal contar com a gente para que <strong>SUA EMPRESA</strong> alcance 
+                    a notoriedade que precisa para chegar e <strong>DOMINAR O TOPO?</strong>
+                    <br>
+                    <br>
+                    Somos <strong>ESPECIALISTAS em soluções VISUAIS e FUNCIONAIS</strong> para 
+                    o seu ambiente online!
+                </p>
+            </div>
+        </section>    
+    </div>
+
+    <section class="services" id="services">
+        <h2>Nossos principais serviços:</h2>
+        <div class="painel">
+            <div class="card-services">
+                <h3>Identidade Visual</h3>
+                <img src="img/lampada.gif" alt="desenhoDeLampada">
+                <p>Construção de marcas, branding, identidade visual corporativa, 
+                    papelaria corporativa, manual de identidade visual, redesign e 
+                    modernização de logotipos, logomarcas e símbolos.
+                </p>
+            </div>
+                    <div class="card-services">
+                <h3>Design Gráfico</h3>
+                <img src="img/lapis.gif" alt="desenhoDeLapis">
+                <p>Criação de material institucional para empresas de diversos tipos,
+                    como por exemplo: folders, folhetos, flyers, cartão de visita,
+                    entre divesos outros materiais.
+                </p>
+            </div>
+            <div class="card-services">
+                <h3>Desenvolvimento de Sites</h3>
+                <img src="img/responsive.gif" alt="responsive">
+                <p>Desenvolvimento de sites com design surpreendente, sites responsivos 
+                    (compatíveis com desktops, tablets e smartphones), 
+                    criação de sites auto administráveis, lojas virtuais, 
+                    blogs e sites interativos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="depoiments" id="depoiments">
+        <h2>O que falam sobre nossos serviços</h2>
+        <div class="painel-depoiments"> 
+            <div class="opinion">
+                <h3>QUALIDADE EXCELENTE</h3>
+                <i>⭐⭐⭐⭐⭐</i>
+                <br>
+                <i>Essas são algumas das opniões de nossos clientes</i>
+                <br>
+                <span>basedo em 50 avaliações do Google!</span>
+            </div>
+            <div class="mySwiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card-depoiments">
+                            <img src="img/responsive.gif" id="userPhoto" alt="userPhoto">
+                            <div id="userInfo">
+                                <h3>Monica Nunes</h3>
+                                <i>5 meses atrás</i>
+                            </div>
+                            <div id="coment">
+                                <p>A Criativa Web é nossa parceira de longa data</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card-depoiments">
+                            <img src="img/responsive.gif" id="userPhoto" alt="userPhoto">
+                            <div id="userInfo">
+                                <h3>Monica Nunes</h3>
+                                <i>5 meses atrás</i>
+                            </div>
+                            <div id="coment">
+                                <p>A Criativa Web é nossa parceira de longa data</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="card-depoiments">
+                            <img src="img/responsive.gif" id="userPhoto" alt="userPhoto">
+                            <div id="userInfo">
+                                <h3>Monica Nunes</h3>
+                                <i>5 meses atrás</i>
+                            </div>
+                            <div id="coment">
+                                <p>A Criativa Web é nossa parceira de longa data</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-interface">
+            <img 
+                src="img/fundoMenu.avif" 
+                class='imagem-fundo-form' 
+                alt="imagem fundo"
+            >
+            <h2>Entre em contato!</h2>
+            <p>Estamos localizados na maior metrópole da 
+            América Latina: São Paulo, no tradicional bairro do Ipiranga!</p>
+            <div class="info">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <i>123@hotmail.com</i>
+
+                    <i class="fa-solid fa-phone icon"></i>
+                    <i>(11) 12345-6789</i>
+
+                    <i class="fa-solid fa-location icon"></i>
+                    <i>São Paulo, SP</i>
+                </div>
+            </div>
+
+            <form class="form">
+                    <input type="text" id="nome" placeholder="Seu nome" required>
+                    <input type="text" id="email" placeholder="Seu e-mail" required>
+                    <input type="text" id="phone" placeholder="Seu telefone" required>
+                    <textarea id="mensagem" name="mensagem" cols="50" rows="5" 
+                    placeholder="Digite sua mensagem!"></textarea>        
+                    <button class="button-form" type="submit">Enviar!</button>           
+            </form>
+        </div>
+    </section>
+
+    <button class="button-scroll-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+</body>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 20,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        
+        // Configuração padrão (Mobile)
+        slidesPerView: 1, 
+        
+        // Responsividade do próprio Swiper
+        breakpoints: {
+        768: { slidesPerView: 2},  // Telas maiores que 768px mostram 2 cards
+        1440: { slidesPerView: 3, loop: false } // Telas maiores que 1440px mostram 3
+        },
+    });
+
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.desktop-header');
+        const headerMobile = document.querySelector('.mobile-header');
+        const scrollTopButton = document.querySelector('.button-scroll-top');
+        if (window.scrollY > 755) {
+            header.classList.add('header-scroll');
+            scrollTopButton.style.display = 'block';
+        }
+        if (window.scrollY > 450) {
+            headerMobile.classList.add('header-scroll');
+        } else {
+            header.classList.remove('header-scroll');
+            headerMobile.classList.remove('header-scroll');
+            scrollTopButton.style.display = 'none';
+        }
+    });
+
+    scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+</script>
+
+</html>
