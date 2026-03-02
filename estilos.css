@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    padding-top: 0 !important;
+}
+
+/* #region ESTILOS DESKTOP */
+
+.mobile-header{
+    display: none;
+}
+
+.button {
+    color: black;
+    font-weight: bold;
+    margin: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: ghostwhite;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-hero {
+    font-size: 3rem;
+    color: black;
+    font-weight: bold;
+    margin: 5px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: ghostwhite;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    display: none; /* Esconde o botão inicialmente */
+    z-index: 1000;
+}
+
+/* ---------------SEÇÃO HERO--------------- */
+
+.hero-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.imagem-fundo-desktop {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;   
+    top: 0;
+    left: 0;
+
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.hero {
+    z-index: 1;
+}
+
+.desktop-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: transparent;
+    padding: 5px 50px;
+    z-index: 1000;
+
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-scroll {
+    background-color: ghostwhite;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 5px 15px;
+}
+
+.header-scroll .button-hero {
+    font-size: 1.5rem !important;
+    padding: 0.25rem 0.5rem;
+}
+
+.header-scroll .button {
+    font-size: smaller !important;
+}
+
+.desktop-header nav {
+    text-align: center;
+}
+
+.about {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding-bottom: 50px;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+}
+
+.about-content p {
+    font-size: 2.5rem;
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+    z-index: 1;
+}
+
+/* ---------------SEÇÃO SERVIÇOS--------------- */
+.services::before{
+    content: '';
+    display: block;
+    width: 95vw;
+    height: 1px;
+    background: black;
+    margin: 10px auto;
+    align-self: center;
+}
+
+.services {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.painel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 10%;
+    justify-content: center;
+}
+
+.card-services {
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+/* ---------------SEÇÃO DEPOIMENTOS--------------- */
+.depoiments::before{
+    content: '';
+    display: block;
+    width: 95vw;
+    height: 1px;
+    background: black;
+    margin: 10px auto;
+    align-self: center;
+}
+
+.depoiments {
+    font-size: 28px;
+    text-align: center;
+}
+
+.painel-depoiments {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.swiper {
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+    color: black !important;
+    z-index: 100 !important;
+    transform: scale(0.5);
+}
+
+.opinion {
+    font-size: 24px;
+    padding: 15px;
+}
+
+.opinion span {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+
+.opinion i {
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+}
+
+.card-depoiments {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column: 2/3;
+    background: ghostwhite;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+    border: 1px solid black;
+}
+
+.card-depoiments p {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.card-depoiments i {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.card-depoiments #userPhoto{
+    border: 1px;
+    border-style: solid;
+    border-radius: 100%;
+    max-width: 80%;
+    margin: 5px;
+}
+
+.card-depoiments #coment {
+    grid-column: 1/3;
+    grid-row: 2;
+}
+
+.card-depoiments #userInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-depoiments #userInfo h3 {
+    font-size: 20px;
+}
+
+/* ---------------SEÇÃO CONTATO--------------- */
+.contact::before{
+    content: '';
+    display: block;
+    width: 95vw;
+    height: 1px;
+    background: black;
+    margin: 10px auto;
+}
+
+.imagem-fundo-form {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;   
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+    user-select: none;
+
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    font-size: 26px;
+    position: relative;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+}
+
+.contact-interface {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.contact p {
+    margin: 5px 30px;
+    font-size: 24px
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.contact-icon {
+    font-size: 20px;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 5px;
+}
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr 1fr;
+        color: black;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        padding: 5px;
+        margin: 5px 100px;
+        background-color: transparent;
+
+        position: relative;
+        z-index: 5;
+    }
+    
+    form input, form textarea {
+        color: white;
+        background-color: rgba(128, 128, 128, 0.541);
+        margin: 10px;
+        width: 95%;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    form input#nome{
+        grid-column: 1/3;
+        width: 95%;
+    }
+
+    form input#phone{
+        width: 90%;
+    }
+
+    form textarea {
+        grid-column: 1/3;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: white;
+        padding-left: 5px;
+    }
+
+    .button-form {
+        font-weight: bold;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid black;
+        background-color: ghostwhite;
+        grid-column: 1/3;
+        justify-self: center;
+        max-height: fit-content;
+        max-width: fit-content;
+        cursor: pointer;
+    }
+
+/* #endregion */
+
+/* #region ANIMAÇÕES E INTERAÇÕES */
+
+    /* Transição suave para todos os elementos interativos */
+    .button, .button-form, .card-services, .card-depoiments, form input, form textarea {
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Efeito nos Botões (Menu e Enviar) */
+    .button:hover, .button-form:hover {
+        background-color: #000;
+        color: #fff;
+        transform: translateY(-3px); /* Leve subida */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Efeito nos Cards (Serviços e Depoimentos) */
+    .card-services:hover, .card-depoiments:hover {
+        transform: scale(1.02); /* Aumenta 2% */
+        background-color: #fff;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* Estilo de foco nos campos do formulário */
+    form input:focus, form textarea:focus {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: black;
+        border: 1px solid black;
+    }
+
+/* #endregion */
+
+/* #region RESPONSIVIDADE */
+
+ /* DISPOSITIVOS DE ATÉ 1440px */
+@media (max-width: 1440px) {
+    .button-hero {
+        font-size: 2rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+ /* DISPOSITIVOS ATÉ 1200px */
+@media (max-width: 1024px) {
+
+    .desktop-header {
+        display: none;
+    }
+    
+    /* ---------------SEÇÃO HERO--------------- */
+    .mobile-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: none;
+        z-index: 1000;
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 10px 15px;
+
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mobile-header h2 {
+        font-size: 30px;
+        padding: 0 5px;
+    }
+
+    header a {
+        text-align: end;
+        padding-right: 5px;
+        text-decoration: none;
+    }
+
+    .about-content p {
+        font-size: 2rem;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 50px;
+    }
+
+    /* ---------------SIDEBAR--------------- */
+    #btMenu {
+        display: none;
+    }
+
+    #btMenu:checked ~ .sidebar {
+        right: 0px;
+    }
+
+    #btMenu:checked ~ .openMenu {
+        display: none;
+    }
+    
+    .sidebar {
+        font-size: 3.5rem;
+        display: flex;
+        flex-direction: column;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: ghostwhite;
+        position: fixed;
+        top: 0;
+        transition: all .3s;
+        padding-left: 20px;
+        z-index: 10;
+    }
+
+    .sidebar a {
+        color: black;
+        text-align: left;
+        text-decoration: none;
+        font-style: italic;
+        padding: 5px 5px;
+        width: 80vw;
+        border: none;
+        border-bottom: 1px solid #444;
+    }
+
+    label.openMenu {
+        font-size: 25px;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        color: black;
+        display: block;
+        z-index: 5;
+    }
+
+    label.closeMenu {
+        text-align: right;
+        padding-right: 30px;
+    }
+        /* ---------------SUBMENU--------------- */
+        .submenu {
+            width: 100%;
+        }
+
+        #aba-servicos {
+            display: none;
+        }
+
+        .aba-titulo {
+            display: flex;
+            width: 80vw;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 1px solid;
+        }
+
+        .x-icon {
+            font-size: 1.5rem;
+            display: inline-block;
+            transition: all 0.4s ease;
+            padding: 10px;
+        }
+
+        .lista-servicos {
+            max-height: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #aba-servicos:checked ~ .lista-servicos {
+            max-height: 100vh;
+            border: none;
+            border-bottom: 1px solid black;
+            width: 80vw;
+            transition: all 0.4s ease;
+        }
+
+        #aba-servicos:checked ~ .aba-titulo {
+            border: none;
+        }
+
+        #aba-servicos:checked ~ .aba-titulo .x-icon {
+            transform: rotate(45deg);
+        }
+
+        .lista-servicos li {
+            color: black;
+            text-decoration: none;
+            padding: 5px 20px;
+            font-size: 2.8rem;
+        }
+
+    /* ---------------SEÇÃO DEPOIMENTOS--------------- */
+    .card-depoiments {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr;
+        background: ghostwhite;
+        border-radius: 20px;
+        padding: 15px;
+        margin: 5% 10%;
+        box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+        border: 1px solid black;
+    }
+
+    .card-depoiments #userPhoto{
+        border: 1px;
+        border-style: solid;
+        border-radius: 100%;
+        max-width: 100%;
+    }
+
+    .card-depoiments #userInfo {
+        text-align: start;
+        padding: 0px 10px;
+    }
+
+    .card-depoiments #coment {
+        padding: 5px;
+        text-align: start;
+        grid-column: 1/3;
+    }
+
+    .swiper-button-next, 
+    .swiper-button-prev {
+        margin: 0 -15px;
+    }
+}
+
+ /* DISPOSITIVOS DE ATÉ 768px*/
+@media (max-width: 768px){
+
+    /* ---------------SEÇÃO HERO--------------- */
+    .about-content p {
+        font-size: 1.75rem;
+        padding: 10px;
+        z-index: 2;
+        justify-content: center;
+    }
+
+    .sidebar {
+        font-size: 2.6rem;
+    }
+
+    .lista-servicos li {
+        font-size: 2rem;
+    }
+
+    /* ---------------SEÇÃO SERVIÇOS--------------- */
+    .services {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .painel {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: auto 10px;
+    }
+
+    .card-services {
+        grid-column: auto;
+        font-size: 1rem;
+    }
+    /* ---------------SEÇÃO DEPOIMENTOS--------------- */
+    .depoiments {
+        font-size: 1.5rem;
+    }
+
+    .painel-depoiments {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* ---------------SEÇÃO CONTATO--------------- */
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .contact-icon {
+        font-size: 16px;
+        font-style: normal;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        gap: 5px;
+        margin: 10px 5px;
+        z-index: 2;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr 1fr;
+        color: black;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        z-index: 2;
+    }
+}
+
+ /* DISPOSITIVOS DE ATÉ 420px*/
+@media(max-width: 425px) {
+    .about-content p {
+        font-size: 1.3rem;
+        padding: 10px;
+        z-index: 1;
+    }
+}
+/* #endregion */
